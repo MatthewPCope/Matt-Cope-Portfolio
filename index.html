@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Matt Cope's creative resume" />
+    <!-- <link rel="icon" href="img/favicon 2.png"> -->
+    <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/general.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/queries.css">
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script defer src="js/script.js"></script>
+    <title>Matt Cope &mdash; Developer</title>
+</head>
+
+<body>
+  <header class="header">
+      <a href="#">
+        <img src="img/logo1.png" alt="Matt Cope Logo" class="logo" />
+      </a>
+      <nav class="main-nav">
+        <ul class="main-nav-list">
+          <li><a class="main-nav-link" href="#about">About</a></li>
+          <li><a class="main-nav-link" href="#skills">Skills</a></li>
+          <li><a class="main-nav-link" href="#projects">Projects</a></li>
+          <li><a class="main-nav-link nav-cta" href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <button class="btn-mobile-nav">
+        <ion-icon class="icon-mobile-nav" name="menu-outline"></ion-icon>
+        <ion-icon class="icon-mobile-nav" name="close-outline"></ion-icon>
+      </button>
+  </header>
+    <main>
+        <section class="section-hero">
+          <div class="hero">
+            <div class="hero-text-box">
+              <h1 class="heading-primary">Hey, I’m Matt Cope.</h1>
+              <p class="hero-description">
+                I’m a front-end developer and lifelong creative based in sunny Carmel Valley, CA. I believe great products start with empathy and clarity — not just clean code. I ask questions like “Why are we building this?” before jumping into “How?”
+              </p>
+              <a href="#contact" class="btn btn--full margin-right-sm">Get in touch</a>
+              <a href="#projects" class="btn btn--outline">See my work &darr;</a>
+            </div>
+            <div class="hero-image-box">
+              <picture>
+                <source srcset="img/IMG_2031.png" type="image/png" />
+                <img src="img/IMG_2031.png" alt="Photo of Matt Cope" class="hero-image" />
+              </picture>
+            </div>
+          </div>
+        </section>
+        <section class="section-featured">
+          <div class="container">
+            <h2 class="heading-featured-in">Tech Stack</h2>
+            <div class="logos">
+              <img src="img/nextjs-logo.svg" alt="Next.js logo">
+              <img src="img/React-icon.svg" alt="React logo">
+              <img src="img/JavaScript-logo.png" alt="JavaScript logo">
+              <img src="img/Node.js_logo.svg" alt="Node.js logo">
+              <img src="img/HTML5_logo_and_wordmark.svg" alt="HTML5 logo">
+              <img src="img/CSS3_logo_and_wordmark.svg" alt="CSS3 logo">
+            </div>
+          </div>
+        </section>
+        <section class="section-how" id="projects">
+            <div class="container">
+              <span class="subheading">Projects</span>
+              <h2 class="heading-secondary">Projects I've worked on</h2>
+            </div>
+            <div class="container grid grid--2-cols grid--center-v">
+              <!-- STEP 01 -->
+              <div class="step-text-box">
+                <h3 class="heading-tertiary">Olympiah</h3>
+                <p class="step-description">
+                  A social media platform focused on local youth sports. I built the entire frontend from scratch using Next.js and lead the engineering team as CTO, helping define the tech stack and oversee project direction.
+                </p>
+              </div>
+              <div class="step-image-box">
+                <img src="img/olympiah-ss.png" alt="Olympiah screenshot" class="step-image">
+              </div>
+          
+              <!-- STEP 02 -->
+              <div class="step-image-box">
+                <img src="img/audio.png" alt="Audio Addiction screenshot" class="step-image">
+              </div>
+              <div class="step-text-box">
+                <h3 class="heading-tertiary">Audio Addiction</h3>
+                <p class="step-description">
+                  A full-stack app for organizing and tracking audio gear collections. Built with the MERN stack and optimized for speed with a clean RESTful API and scalable NoSQL database.
+                </p>
+              </div>
+          
+              <!-- STEP 03 -->
+              <div class="step-text-box">
+                <h3 class="heading-tertiary">Barkeeper's Companion</h3>
+                <p class="step-description">
+                  A cocktail recipe builder and tracker built with React and MongoDB. I led the team, designed a responsive UI, and set up secure user login with JWT authentication and cookie-based sessions.
+                </p>
+              </div>
+              <div class="step-image-box">
+                <img src="img/barkeepers.png" alt="Barkeeper's Companion screenshot" class="step-image">
+              </div>
+            </div>
+        </section>
+        <section class="section-work" id="work">
+          <div class="container center-text">
+            <span class="subheading">Work History</span>
+            <h2 class="heading-secondary">Where I've Been</h2>
+          </div>
+        
+          <div class="container work-history">
+            <div class="work-item">
+              <h3 class="work-title">Chief Technology Officer</h3>
+              <img src="img/logo.png" alt="Olympiah logo" class="company-logo">
+              <p class="work-company">Olympiah | 2024 – Present</p>
+              <ul class="work-details">
+                <li>Lead the engineering team for a startup building a community sports platform.</li>
+                <li>Designed the frontend architecture and directed backend integration.</li>
+                <li>Managed and mentored a team of 20+ developers.</li>
+              </ul>
+            </div>
+        
+            <div class="work-item">
+              <h3 class="work-title">Founder | Legal Videographer</h3>
+              <img src="img/vidproquo.png" alt="Vid Pro Quo logo" class="company-logo">
+              <p class="work-company">Vid Pro Quo, Inc | 2016 – 2023</p>
+              <ul class="work-details">
+                <li>Founded a professional legal video service for law firms and court reporting agencies.</li>
+                <li>Secured contracts with leading Bay Area firms and maintained excellent client relationships.</li>
+                <li>Handled all filming, editing, invoicing, and operations independently.</li>
+              </ul>
+            </div>
+        
+            <div class="work-item">
+              <h3 class="work-title">In-House Legal Videographer</h3>
+              <img src="img/esquire.png" alt="Esquire Solutions logo" class="company-logo">
+              <p class="work-company">Esquire Solutions | 2010 – 2016</p>
+              <ul class="work-details">
+                <li>Filmed over 1,000 depositions throughout the Bay Area and internationally.</li>
+                <li>Maintained strict adherence to court-approved procedural standards.</li>
+                <li>Built strong relationships through communication, reliability, and professionalism.</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+        <section class="section-meals" id="skills">
+            <div class="container center-text">
+              <span class="subheading">Skills</span>
+              <h2 class="heading-secondary">What I bring to the table</h2>
+            </div>
+            <div class="container grid grid--3-cols margin-bottom-md">
+              <div class="meal">
+                <img src="img/pexels-negativespace-34600.jpg" class="meal-image" alt="Development Focus">
+                <div class="meal-content">
+                  <div class="meal-tags">
+                    <span class="tag tag--vegetarian">Development</span>
+                  </div>
+                  <p class="meal-title">My Approach</p>
+                  <ul class="meal-attributes">
+                    <li class="meal-attribute"><ion-icon class="meal-icon" name="person-outline"></ion-icon>
+                      <span>User-first focus</span></li>
+                    <li class="meal-attribute"><ion-icon class="meal-icon" name="construct-outline"></ion-icon>
+                      <span>Clean, maintainable code</span></li>
+                    <li class="meal-attribute"><ion-icon class="meal-icon" name="bulb-outline"></ion-icon>
+                      <span>Clear, practical thinking</span></li>
+                    <li class="meal-attribute"><ion-icon class="meal-icon" name="trending-up-outline"></ion-icon>
+                      <span>Fast learner, adaptable</span></li>
+                  </ul>
+                </div>
+              </div>
+          
+              <div class="meal">
+                <img src="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg" class="meal-image" alt="Problem solving image">
+                <div class="meal-content">
+                  <div class="meal-tags">
+                    <span class="tag tag--vegan">Mindset</span>
+                  </div>
+                  <p class="meal-title">Problem Solver</p>
+                  <ul class="meal-attributes">
+                    <li class="meal-attribute">
+                      <ion-icon class="meal-icon" name="hammer-outline"></ion-icon>
+                      <span>Fixer by nature</span>
+                    </li>
+                    <li class="meal-attribute">
+                      <ion-icon class="meal-icon" name="trail-sign-outline"></ion-icon>
+                      <span>Big picture thinker</span>
+                    </li>
+                    <li class="meal-attribute">
+                      <ion-icon class="meal-icon" name="sunny-outline"></ion-icon>
+                      <span>Stays positive</span>
+                    </li>
+                    <li class="meal-attribute">
+                      <ion-icon class="meal-icon" name="hourglass-outline"></ion-icon>
+                      <span>Calm under pressure</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+          
+              <div class="meal">
+                <img src="https://images.pexels.com/photos/1181315/pexels-photo-1181315.jpeg" class="meal-image" alt="Soft skills visual">
+                <div class="meal-content">
+                  <div class="meal-tags">
+                    <span class="tag tag--paleo">Human Side</span>
+                  </div>
+                  <p class="meal-title">Soft Skills</p>
+                  <ul class="meal-attributes">
+                    <li class="meal-attribute">
+                      <ion-icon class="meal-icon" name="people-outline"></ion-icon>
+                      <span>Easy to work with</span>
+                    </li>
+                    <li class="meal-attribute">
+                      <ion-icon class="meal-icon" name="happy-outline"></ion-icon>
+                      <span>Team-focused, no ego</span>
+                    </li>
+                    <li class="meal-attribute">
+                      <ion-icon class="meal-icon" name="rocket-outline"></ion-icon>
+                      <span>Leads with empathy</span>
+                    </li>
+                    <li class="meal-attribute">
+                      <ion-icon class="meal-icon" name="chatbubble-ellipses-outline"></ion-icon>
+                      <span>Clear communicator</span>
+                    </li>
+                    
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="container all-recipes">
+              <a href="#projects" class="link">See my projects &rarr;</a>
+            </div>
+        </section>
+        <section class="section-testimonials" id="about">
+          <div class="testimonials-container">
+            <span class="subheading">About Me</span>
+            <h2 class="heading-secondary">More than just code</h2>
+            <div class="about-me">
+              <p class="about-me-text">
+                Born and raised in the Bay Area, I've always been surrounded by creativity, innovation, and community. I’m a builder by nature — whether it’s crafting a project, solving a problem, or bringing ideas to life. After running my own videography business and spending years immersed in music production, I transitioned into full-stack web development, bringing with me a deep understanding of collaboration, leadership, and real-world problem-solving. I’m not a kid fresh out of college; I’m a communicator who values people, clear direction, and thoughtful execution. With two solid years of coding experience and 41 years of life experience, I approach every project with curiosity, humility, and a focus on the big picture — always asking why we’re building something, not just how. I care about creating meaningful tools, keeping things human, and making the work itself enjoyable.
+              </p>
+            </div>
+          </div>
+        
+          <div class="gallery">
+            <figure class="gallery-item">
+              <img src="img/pexels-mickhaupt-5353965.jpg" alt="Matt hiking">
+            </figure>
+            <figure class="gallery-item">
+              <img src="img/pexels-anand-dandekar-277758-981451.jpg" alt="Matt playing guitar">
+            </figure>
+            <figure class="gallery-item">
+              <img src="img/pexels-mika-lika-50962711-7654250.jpg" alt="Matt fixing something">
+            </figure>
+            <figure class="gallery-item">
+              <img src="img/pexels-pixabay-326055.jpg" alt="Family photo">
+            </figure>
+            <figure class="gallery-item">
+              <img src="img/pexels-bertellifotografia-577584.jpg" alt="Family photo">
+            </figure>
+            <figure class="gallery-item">
+              <img src="img/pexels-dreamypixel-552789.jpg" alt="Family photo">
+            </figure>
+          </div>
+        </section>
+        <section class="section-pricing" id="work">
+            <div class="container">
+              <span class="subheading">Work With Me</span>
+              <h2 class="heading-secondary">What You Get</h2>
+            </div>
+          
+            <div class="container grid grid--2-cols margin-bottom-md">
+              <div class="pricing-plan pricing-plan--starter">
+                <header class="plan-header">
+                  <p class="plan-name">Collaborative Partner</p>
+                  <p class="plan-text">Team-oriented with a problem-solving mindset.</p>
+                </header>
+                <ul class="list">
+                  <li class="list-item">
+                    <ion-icon name="checkmark-outline" class="list-icon"></ion-icon>
+                    <span>Creative and practical problem-solver</span>
+                  </li>
+                  <li class="list-item">
+                    <ion-icon name="checkmark-outline" class="list-icon"></ion-icon>
+                    <span>Prioritizes user experience and clear goals</span>
+                  </li>
+                  <li class="list-item">
+                    <ion-icon name="checkmark-outline" class="list-icon"></ion-icon>
+                    <span>Communicates early and often</span>
+                  </li>
+                </ul>
+              </div>
+          
+              <div class="pricing-plan pricing-plan--complete">
+                <header class="plan-header">
+                  <p class="plan-name">Independent Contributor</p>
+                  <p class="plan-text">Self-motivated and accountable from start to finish.</p>
+                </header>
+                <ul class="list">
+                  <li class="list-item">
+                    <ion-icon name="checkmark-outline" class="list-icon"></ion-icon>
+                    <span>Owns projects without needing hand-holding</span>
+                  </li>
+                  <li class="list-item">
+                    <ion-icon name="checkmark-outline" class="list-icon"></ion-icon>
+                    <span>Adaptable to new challenges and tech</span>
+                  </li>
+                  <li class="list-item">
+                    <ion-icon name="checkmark-outline" class="list-icon"></ion-icon>
+                    <span>Focused on long-term solutions</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          
+            <div class="container grid">
+              <aside class="plan-details">
+                Collaboration, communication, and craftsmanship — no matter the project.
+              </aside>
+            </div>
+          
+            <div class="container grid grid--4-cols">
+              <div class="feature">
+                <ion-icon name="timer-outline" class="feature-icon"></ion-icon>
+                <p class="feature-title">Efficient, not rushed</p>
+                <p class="feature-text">Deliver on time without cutting corners.</p>
+              </div>
+              <div class="feature">
+                <ion-icon name="hand-left-outline" class="feature-icon"></ion-icon>
+                <p class="feature-title">No drama, no ego</p>
+                <p class="feature-text">Team success comes first, always.</p>
+              </div>
+              <div class="feature">
+                <ion-icon name="bulb-outline" class="feature-icon"></ion-icon>
+                <p class="feature-title">Creative solutions</p>
+                <p class="feature-text">Practical ideas that keep users in mind.</p>
+              </div>
+              <div class="feature">
+                <ion-icon name="earth-outline" class="feature-icon"></ion-icon>
+                <p class="feature-title">Adaptable</p>
+                <p class="feature-text">Comfortable in fast-moving environments.</p>
+              </div>
+            </div>
+        </section>
+        <section class="section-cta" id="contact">
+          <div class="cta">
+            <div class="cta-text-box">
+              <h2 class="heading-secondary">Get In Touch</h2>
+              <p class="cta-text">
+                Whether you have a project in mind, want to collaborate, or just want to connect — I'd love to hear from you.
+              </p>
+              <form class="cta-form" id="contact-form">
+                <div>
+                  <label for="full_name">Full Name</label>
+                  <input id="full_name" name="full_name" type="text" placeholder="John Smith" required>
+                </div>
+                <div>
+                  <label for="email">Email Address</label>
+                  <input id="email" name="email" type="email" placeholder="me@example.com" required>
+                </div>
+                <div class="full-width">
+                  <label for="message">Message</label>
+                  <textarea id="message" name="message" rows="4" placeholder="Write your message here..." required></textarea>
+                </div>
+                <button type="submit" class="btn btn--form">Send Message</button>
+              </form>
+              <div id="form-message" class="form-message hidden">Message sent successfully!</div>
+            </div>
+        
+            <div class="cta-image-box" role="img" aria-label="Contact image" style="background-image: linear-gradient(
+              to right bottom,
+              rgba(255, 136, 130, 0.35),
+              rgba(255, 194, 180, 0.35)
+            ), url('https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg'); background-size: cover; background-position: center;">
+            </div>
+          </div>
+        </section>
+    </main>
+    <footer class="footer">
+      <div class="container grid grid--footer">
+        <div class="logo-col">
+          <a href="#" class="footer-logo">
+            <img src="img/logo1.png" alt="Matt Cope Logo" class="logo" />
+          </a>
+          <div class="footer-socials">
+            <a class="footer-link" href="https://github.com/MatthewPCope" target="_blank" rel="noopener">
+              <ion-icon class="social-icon" name="logo-github"></ion-icon>
+            </a>
+            <a class="footer-link" href="https://www.linkedin.com/in/mpcope/" target="_blank" rel="noopener">
+              <ion-icon class="social-icon" name="logo-linkedin"></ion-icon>
+            </a>
+            <a class="footer-link" href="mailto:matthew.p.cope@gmail.com">
+              <ion-icon class="social-icon" name="mail-outline"></ion-icon>
+            </a>
+          </div>
+          <p class="copyright">
+            &copy; <span class="year">2024</span> Matt Cope. All rights reserved.
+          </p>
+        </div>
+    
+        <div class="address-col">
+          <p class="footer-heading">Get in Touch</p>
+          <address class="contacts">
+            <p class="address">Based in Carmel Valley, CA</p>
+            <p>
+              <a class="footer-link" href="mailto:your@email.com">Matthew.p.cope@gmail.com</a>
+            </p>
+          </address>
+        </div>
+    
+        <nav class="nav-col">
+          <p class="footer-heading">Quick Links</p>
+          <ul class="footer-nav">
+            <li><a class="footer-link" href="#projects">Projects</a></li>
+            <li><a class="footer-link" href="#skills">Skills</a></li>
+            <li><a class="footer-link" href="#about">About</a></li>
+            <li><a class="footer-link" href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </footer>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>
