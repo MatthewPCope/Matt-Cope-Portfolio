@@ -200,8 +200,16 @@
   color: #ddd;
   margin-bottom: 1.2rem;
 }
-.step-image{
-  width: 90%;
+.step-image {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 0.8rem 2rem rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.step-image:hover {
+  transform: scale(1.03);
+  box-shadow: 0 1.2rem 2.4rem rgba(0, 0, 0, 0.15);
 }
 .step-description{
   font-size: 1.8rem;
