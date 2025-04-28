@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
         content="Matt Cope's creative resume" />
-    <!-- <link rel="icon" href="img/favicon 2.png"> -->
+    <link rel="icon" href="img/mc_logo.png">
     <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,21 +22,24 @@
 
 <body>
   <header class="header">
-      
-        <h3 class="heading-primary-nav">MC</h3>
-      
-      <nav class="main-nav">
-        <ul class="main-nav-list">
-          <li><a class="main-nav-link" href="#about">About</a></li>
-          <li><a class="main-nav-link" href="#skills">Skills</a></li>
-          <li><a class="main-nav-link" href="#projects">Projects</a></li>
-          <li><a class="main-nav-link nav-cta" href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-      <button class="btn-mobile-nav">
-        <ion-icon class="icon-mobile-nav" name="menu-outline"></ion-icon>
-        <ion-icon class="icon-mobile-nav" name="close-outline"></ion-icon>
-      </button>
+    <a href="#" class="logo-link">
+      <img src="img/mc_logo.png" alt="Matt Cope Logo" class="logo-image" />
+    </a>
+  
+    <nav class="main-nav">
+      <ul class="main-nav-list">
+        <li><a class="main-nav-link" href="#projects">Projects</a></li>
+        <li><a class="main-nav-link" href="#skills">Skills</a></li>
+        <li><a class="main-nav-link" href="#work">Work</a></li>
+        <li><a class="main-nav-link" href="#about">About</a></li>
+        <li><a class="main-nav-link nav-cta" href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  
+    <button class="btn-mobile-nav">
+      <ion-icon class="icon-mobile-nav" name="menu-outline"></ion-icon>
+      <ion-icon class="icon-mobile-nav" name="close-outline"></ion-icon>
+    </button>
   </header>
     <main>
         <section class="section-hero">
@@ -356,11 +359,7 @@
               <div id="form-message" class="form-message hidden">Message sent successfully!</div>
             </div>
         
-            <div class="cta-image-box" role="img" aria-label="Contact image" style="background-image: linear-gradient(
-              to right bottom,
-              rgba(255, 136, 130, 0.35),
-              rgba(255, 194, 180, 0.35)
-            ), url('https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg'); background-size: cover; background-position: center;">
+            <div class="cta-image-box" role="img" aria-label="Contact image" >
             </div>
           </div>
         </section>
@@ -368,8 +367,8 @@
     <footer class="footer">
       <div class="container grid grid--footer">
         <div class="logo-col">
-          <a href="#" class="footer-logo">
-            <img src="img/logo1.png" alt="Matt Cope Logo" class="logo" />
+          <a href="#" class="logo-link">
+            <img src="img/mc_logo.png" alt="Matt Cope Logo" class="logo-image" />
           </a>
           <div class="footer-socials">
             <a class="footer-link" href="https://github.com/MatthewPCope" target="_blank" rel="noopener">
@@ -377,6 +376,9 @@
             </a>
             <a class="footer-link" href="https://www.linkedin.com/in/mpcope/" target="_blank" rel="noopener">
               <ion-icon class="social-icon" name="logo-linkedin"></ion-icon>
+            </a>
+            <a class="footer-link" href="https://www.frontendmentor.io/profile/MatthewPCope" target="_blank" rel="noopener">
+              <ion-icon class="social-icon" name="code-slash-outline"></ion-icon>
             </a>
             <a class="footer-link" href="mailto:matthew.p.cope@gmail.com">
               <ion-icon class="social-icon" name="mail-outline"></ion-icon>
@@ -402,6 +404,7 @@
           <ul class="footer-nav">
             <li><a class="footer-link" href="#projects">Projects</a></li>
             <li><a class="footer-link" href="#skills">Skills</a></li>
+            <li><a class="footer-link" href="#work">Work</a></li>
             <li><a class="footer-link" href="#about">About</a></li>
             <li><a class="footer-link" href="#contact">Contact</a></li>
           </ul>

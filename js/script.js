@@ -11,19 +11,29 @@ btnNavEl.addEventListener('click', () => {
   headerEl.classList.toggle("nav-open")
 })
 
-// Sticky Navigation //
+// Sticky Navigation
 
-const sectionHeroEl = document.querySelector('.section-hero')
+const header = document.querySelector('.header');
+const heroSection = document.querySelector('.section-hero');
 
-const observer = new IntersectionObserver(([entry])=>{
-  document.body.classList.toggle('sticky', !entry.isIntersecting)
-}, 
-{
-  root: null,
-  threshold: 0,
-  rootMargin: '-80px'
-})
-observer.observe(sectionHeroEl)
+const observer = new IntersectionObserver(
+  function (entries) {
+    const entry = entries[0];
+
+    if (!entry.isIntersecting) {
+      header.classList.add('shrink');
+    } else {
+      header.classList.remove('shrink');
+    }
+  },
+  {
+    root: null,
+    threshold: 0,
+    rootMargin: "-96px", // match your header height
+  }
+);
+
+observer.observe(heroSection);
 
 ///////////////////////////////////////////////////////////
 // Smooth scrolling animation ***this doesn't need to be here, it works without it*****
