@@ -1,8 +1,8 @@
 :root {
-  --color-primary: #194350;
-  --color-secondary: #FF8882;
-  --color-accent: #FFC2B4;
-  --color-tint: #9DBEB9;
+  --color-primary: #365486;
+  --color-secondary: #7FC7D9;
+  --color-accent: #DCF2F1;
+  --color-tint: #0F1035;
   --color-shade: #8daba7;
 
   --color-dark: #333;
@@ -19,10 +19,13 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: var(--color-light);
+  background-color: transparent;
+  top: 0;
   height: 9.6rem;
   padding: 0 4.8rem;
-  position: relative;
+  position: absolute;
+  width: 100%;
+  z-index: 999;
 }
 .logo{
   height: 6rem;
@@ -41,25 +44,25 @@
 .main-nav-link:visited{
   display: inline-block;
   text-decoration: none;
-  color: #194350;
+  color: var(--color-primary);
   font-weight: 500;
   font-size: 1.8rem;
   transition: all 0.3s;
 }
 .main-nav-link:hover,
 .main-nav-link:active{
-  color: #FF8882;
+  color: var(--color-secondary);
 }
 .main-nav-link.nav-cta:link,
 .main-nav-link.nav-cta:visited{
   padding: 1.2rem 2.4rem;
   border-radius: 9px;
-  color: #fff;
-  background-color: #194350;
+  color: var(--color-light);
+  background-color: var(--color-primary);
 }
 .main-nav-link.nav-cta:hover,
 .main-nav-link.nav-cta:active{
-  background-color: #FF8882;
+  background-color: var(--color-secondary);
 }
 
 /* mobile */
@@ -73,7 +76,7 @@
 .icon-mobile-nav {
   height: 4.8rem;
   width: 4.8rem;
-  color: #194350;
+  color: var(--color-primary);
 }
 
 .icon-mobile-nav[name="close-outline"] {
@@ -102,26 +105,52 @@
 /* HERO SECTION */
 /**************************/
 
-.section-hero{
-  background-color: var(--color-tint);
-  padding: 4.4rem 0 9.6rem 0;
+.section-hero {
+  position: relative;
+  background: linear-gradient(
+      rgba(25, 67, 80, 0.5),
+      rgba(25, 67, 80, 0.5)
+    ),
+    url('../img/pexels-bertellifotografia-577584.jpg') center/cover no-repeat;
+    background-attachment: fixed;
+  padding: 9.6rem 0;
+  color: #fff;
 }
-.hero{
+
+.hero {
   max-width: 130rem;
   margin: 0 auto;
   padding: 0 3.2rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 9.6rem;
   align-items: center;
+  gap: 6.4rem;
 }
-.hero-description{
+
+.hero-text-box {
+  max-width: 60rem;
+}
+
+.hero-description {
   font-size: 2rem;
   line-height: 1.6;
   margin-bottom: 4.8rem;
 }
-.hero-image{
+
+.hero-image-box {
   width: 100%;
+  max-width: 45rem;
+  margin: 0 auto;
+  border-radius: 1.2rem;
+  overflow: hidden;
+  box-shadow: 0 1.2rem 2.4rem rgba(0, 0, 0, 0.1);
+}
+
+.hero-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
 }
 .delivered-meals{
   display: flex;
@@ -137,7 +166,7 @@
   width: 4.8rem;
   border-radius: 50%;
   margin-right: -1.6rem;
-  border: 3px solid #FFC2B4;
+  border: 3px solid var(--color-accent);
 }
 .delivered-images img:last-child{
   margin: 0;
@@ -147,7 +176,7 @@
   font-weight: 600;
 }
 .delivered-text span{
-  color: #FF8882;
+  color: var(--color-secondary);
   font-weight: 700;
 }
 
@@ -165,7 +194,7 @@
   font-weight: 500;
   text-align: center;
   margin-bottom: 2.4rem;
-  color: #9DBEB9;
+  color: var(--color-tint);
 }
 .logos {
   display: flex;
@@ -225,12 +254,12 @@
   width: 60%;
   z-index: -2;
   padding-bottom: 60%;
-  background-color: #FFC2B4;
+  background-color: var(--color-accent);
 }
 .step-image-box::after{
   width: 45%;
   padding-bottom: 45%;
-  background-color: #FF8882;
+  background-color: var(--color-secondary);
   z-index: -1;
 }
 
@@ -263,7 +292,7 @@
   padding: 0.4rem 0.8rem;
   font-size: 1.2rem;
   text-transform: uppercase;
-  color: #194350;
+  color: var(--color-secondary);
   border-radius: 100px;
   font-weight: 600;
 }
@@ -293,14 +322,14 @@
 }
 .meal-title{
   font-size: 2rem;
-  color: #194350;
+  color: var(--color-primary);
   font-weight: 600;
   margin-bottom: 3.2rem;
 }
 .meal-icon{
   height: 2.4rem;
   width: 2.4rem;
-  color: #FF8882;
+  color: var(--color-secondary);
 }
 .all-recipes{
   text-align: center;
@@ -311,68 +340,55 @@
 /* TESTIMONIAL SECTION */
 /**************************/
 
-.section-testimonials{
-  background-color: var(--color-tint);
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: center;
-  gap: 4.8rem;
-}
-.testimonials-container {
-  padding: 6.4rem 4.8rem;
+/* ABOUT ME SECTION */
+.section-testimonials#about {
+  position: relative;
+  background: 
+    linear-gradient(rgba(25, 67, 80, 0.4), rgba(25, 67, 80, 0.4)),
+    url('../img/pexels-mickhaupt-5353965.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* ✨ parallax magic here */
+  background-repeat: no-repeat;
+  color: #fff;
   text-align: center;
+  padding: 12.8rem 3.2rem;
 }
 
-.about-me {
-  margin-top: 2.4rem;
+.about-me-container {
+  max-width: 80rem;
+  margin: 0 auto;
+}
+
+.about-me-heading {
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 1px;
+  font-size: 1.6rem;
+  color: var(--color-primary);
+  margin-bottom: 1.6rem;
+}
+
+.heading-secondary {
+  font-size: 4.4rem;
+  margin-bottom: 3.2rem;
+}
+
+.about-me-text-box {
+  margin-top: 3.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
 }
 
 .about-me-text {
-  font-size: 1.8rem;
+  font-size: 2rem;
   line-height: 1.6;
-  color: #555;
-  max-width: 80ch;
-  margin: 0 auto;
-}
-.testimonials{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  row-gap: 4.8rem;
-  column-gap: 8rem;
-}
-.testimonial-image{
-  width: 6.4rem;
-  border-radius: 50%;
-  margin-bottom: 1.2rem;
-}
-.testimonial-text{
-  font-size: 1.8rem;
-  line-height: 1.8;
-  margin-bottom: 1.6rem;
-}
-.testimonial-name{
-  font-size: 1.6rem;
-  color: #9DBEB9;
-}
-.gallery{
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.6rem;
-  padding: 1.6rem;
-}
-.gallery-item{
-  overflow: hidden;
-}
-.gallery-item img {
-  display: block;
-  width: 100%;
-  border-radius: 12px; /* Rounded corners */
-  box-shadow: 0 0.8rem 1.6rem rgba(0, 0, 0, 0.1); /* Soft shadow */
-  transition: all 0.3s ease;
 }
 
-.gallery-item img:hover {
-  transform: scale(1.05); /* Slight zoom on hover */
+/* REMOVE gallery styles for #about */
+#about .gallery {
+  display: none;
 }
 
 /**************************/
@@ -399,11 +415,11 @@
 }
 .pricing-plan--starter{
   justify-self: end;
-  border: 2px solid #FFC2B4;
+  border: 2px solid var(--color-accent);
   padding: 4.6rem;
 }
 .pricing-plan--complete{
-  background-color: #FFC2B4;
+  background-color: var(--color-accent);
   padding: 4.8rem;
   position: relative;
   overflow: hidden;
@@ -415,14 +431,14 @@
   top: 6%;
   right: -18%;
   font-size: 1.4rem;
-  color: #194350;
+  color: var(--color-primary);
   font-weight: 700;
-  background-color: #FF8882;
+  background-color: var(--color-secondary);
   padding: 0.8rem 8rem;
   transform: rotate(45deg);
 }
 .plan-name{
-  color: #FF8882;
+  color: var(--color-primary);
   font-weight: 600;
   font-size: 2rem;
   text-transform: uppercase;
@@ -432,7 +448,7 @@
 .plan-price{
   font-size: 6.2rem;
   font-weight: 600;
-  color: #194350;
+  color: var(--color-primary);
   margin-bottom: 1.6rem;
 }
 .plan-price span {
@@ -454,17 +470,17 @@
   text-align: center;
 }
 .feature-icon{
-  color: #FF8882;
+  color: var(--color-secondary);
   height: 3.2rem;
   width: 3.2rem;
-  background-color: #FFC2B4;
+  background-color: var(--color-tint);
   margin-bottom: 3.2rem;
   padding: 1.6rem;
   border-radius: 50%;
 }
 .feature-title{
   font-size: 2.4rem;
-  color: #194350;
+  color: var(--color-primary);
   font-weight: 700;
   margin-bottom: 1.6rem;
 }
@@ -483,7 +499,7 @@
 .cta {
   display: grid;
   grid-template-columns: 2fr 1fr;
-  background-image: linear-gradient(to right bottom, #FF8882, #FFC2B4);
+  background-image: linear-gradient(to right bottom, var(--color-secondary), var(--color-accent));
   box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
   border-radius: 11px;
   overflow: hidden;
@@ -491,11 +507,11 @@
 
 .cta-text-box {
   padding: 4.8rem 6.4rem 6.4rem 6.4rem;
-  color: #194350;
+  color: var(--color-primary);
 }
 
 .cta .heading-secondary {
-  color: #194350;
+  color: var(--color-primary);
   margin-bottom: 3.2rem;
 }
 
@@ -533,7 +549,7 @@
   color: inherit;
   font-family: inherit;
   border: none;
-  background-color: #FFC2B4;
+  background-color: var(--color-accent);
   border-radius: 9px;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
@@ -554,14 +570,14 @@
 
 .cta *:focus {
   outline: none;
-  box-shadow: 0 0 0 0.8rem rgba(255, 194, 180, 0.5);
+  box-shadow: 0 0 0 0.2rem var(--color-primary);
 }
 
 .form-message {
   margin-top: 2rem;
   font-size: 1.8rem;
-  color: #194350;
-  background-color: #FFC2B4;
+  color: var(--color-primary);
+  background-color: var(--color-accent);
   padding: 1.2rem 2.4rem;
   border-radius: 9px;
   text-align: center;
@@ -578,8 +594,8 @@
 /**************************/
 .footer {
   padding: 8rem 0;
-  border-top: 1px solid #9DBEB9;
-  background-color: #f8f9fa; /* optional: light subtle background */
+  border-top: 1px solid var(--color-tint);
+  background-color: var(--color-light); /* optional: light subtle background */
 }
 
 .grid--footer {
@@ -613,17 +629,17 @@
 .social-icon {
   height: 2.8rem;
   width: 2.8rem;
-  color: #194350;
+  color: var(--color-primary);
   transition: all 0.3s;
 }
 
 .social-icon:hover {
-  color: #FF8882;
+  color: var(--color-secondary);
 }
 
 .copyright {
   font-size: 1.4rem;
-  color: #9DBEB9;
+  color: var(--color-tint)9;
   margin-top: 2.4rem;
 }
 
@@ -631,14 +647,14 @@
   font-size: 1.8rem;
   font-weight: 600;
   margin-bottom: 2.4rem;
-  color: #194350;
+  color: var(--color-primary);
 }
 
 .contacts {
   font-style: normal;
   font-size: 1.6rem;
   line-height: 1.6;
-  color: #555;
+  color: var(--color-grey);
 }
 
 .address {
@@ -656,13 +672,13 @@
 .footer-link:visited {
   text-decoration: none;
   font-size: 1.6rem;
-  color: #555;
+  color: var(--color-grey);
   transition: all 0.3s;
 }
 
 .footer-link:hover,
 .footer-link:active {
-  color: #FF8882;
+  color: var(--color-secondary);
 }
 
 
@@ -681,7 +697,7 @@
 }
 
 .work-item {
-  background-color: #FFC2B4;
+  background-color: var(--color-accent);
   padding: 3.2rem;
   border-radius: 9px;
   box-shadow: 0 1.2rem 3.2rem rgba(0, 0, 0, 0.05);
@@ -689,14 +705,14 @@
 
 .work-title {
   font-size: 2.4rem;
-  color: #194350;
+  color: var(--color-primary);
   font-weight: 700;
   margin-bottom: 0.8rem;
 }
 
 .work-company {
   font-size: 1.6rem;
-  color: #555;
+  color: var(--color-grey);
   margin-bottom: 2.4rem;
 }
 
@@ -712,7 +728,7 @@
 .work-details li {
   font-size: 1.8rem;
   line-height: 1.6;
-  color: #333;
+  color: var(--color-dark);
   position: relative;
   padding-left: 2.4rem;
 }
@@ -722,7 +738,7 @@
   position: absolute;
   left: 0;
   top: 0;
-  color: #FF8882;
+  color: var(--color-secondary);
   font-size: 2.4rem;
   line-height: 1;
 }

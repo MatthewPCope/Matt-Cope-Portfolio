@@ -32,25 +32,34 @@ const allLinks = document.querySelectorAll("a:link");
 
 allLinks.forEach(function (link) {
   link.addEventListener("click", function (e) {
-    e.preventDefault();
     const href = link.getAttribute("href");
 
-    // Scroll back to top
-    if (href === "#")
-      window.scrollTo({
-        top: 0,
-        behavior: "smooth",
-      });
+    // Only prevent default for internal links
+    if (href && href.startsWith("#")) {
+      e.preventDefault();
 
-    // Scroll to other links
-    if (href !== "#" && href.startsWith("#")) {
-      const sectionEl = document.querySelector(href);
-      sectionEl.scrollIntoView({ behavior: "smooth" });
+      // Scroll back to top
+      if (href === "#") {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+      }
+
+      // Scroll to other links
+      else {
+        const sectionEl = document.querySelector(href);
+        if (sectionEl) {
+          sectionEl.scrollIntoView({ behavior: "smooth" });
+        }
+      }
+
+      // Close mobile navigation
+      if (link.classList.contains("main-nav-link")) {
+        headerEl.classList.toggle("nav-open");
+      }
     }
-
-    // Close mobile naviagtion
-    if (link.classList.contains("main-nav-link"))
-      headerEl.classList.toggle("nav-open");
+    // Otherwise (external link like GitHub, LinkedIn, Email) — do nothing, allow browser to handle
   });
 });
 
