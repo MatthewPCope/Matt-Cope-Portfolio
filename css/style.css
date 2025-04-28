@@ -125,10 +125,7 @@
 
 .section-hero {
   position: relative;
-  background: linear-gradient(
-      rgba(25, 67, 80, 0.5),
-      rgba(25, 67, 80, 0.5)
-    ),
+  background: 
     url('../img/pexels-bertellifotografia-577584.jpg') center/cover no-repeat;
     background-attachment: fixed;
   padding: 9.6rem 0;
