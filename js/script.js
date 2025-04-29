@@ -1,9 +1,9 @@
-// set current year
+
 const yearEl = document.querySelector(".year")
 const currentYear = new Date().getFullYear()
 yearEl.textContent = currentYear
 
-// make mobile nav work
+
 const btnNavEl = document.querySelector('.btn-mobile-nav')
 const headerEl = document.querySelector(".header")
 
@@ -29,7 +29,7 @@ const observer = new IntersectionObserver(
   {
     root: null,
     threshold: 0,
-    rootMargin: "-96px", // match your header height
+    rootMargin: "-96px",
   }
 );
 
@@ -93,9 +93,9 @@ function checkFlexGap() {
 }
 checkFlexGap();
 
-// Initialize EmailJS
+
 (function() {
-  emailjs.init("EpUlmZbL0nsJI0Bbw"); // Replace with your actual EmailJS user ID
+  emailjs.init("EpUlmZbL0nsJI0Bbw");
 })();
 
 // Contact Form Submission
@@ -112,7 +112,7 @@ if (contactForm) {
 
         setTimeout(() => {
           formMessage.classList.add('hidden');
-        }, 3000); // Hide message after 3 seconds
+        }, 3000);
 
         this.reset();
       }, (error) => {
