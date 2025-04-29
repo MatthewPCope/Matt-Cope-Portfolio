@@ -133,6 +133,7 @@
 }
 
 .hero {
+  background-color: transparent;
   max-width: 130rem;
   margin: 0 auto;
   padding: 0 3.2rem;
