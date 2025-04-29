@@ -124,9 +124,8 @@
 /**************************/
 
 .section-hero {
+  background: url('../img/pexels-bertellifotografia-577584.jpg') center/cover no-repeat;
   position: relative;
-  background: 
-    url('../img/pexels-bertellifotografia-577584.jpg') center/cover no-repeat;
     background-attachment: fixed;
   padding: 9.6rem 0;
   color: #fff;
